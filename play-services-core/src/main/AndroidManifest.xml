@@ -780,30 +780,6 @@
             </intent-filter>
         </activity>
 
-        <!-- microG Settings activity-alias shown in Launcher -->
-        <activity-alias
-            android:name="org.microg.gms.ui.SettingsActivity"
-            android:icon="@mipmap/ic_app_settings"
-            android:label="@string/gms_settings_name"
-            android:roundIcon="@mipmap/ic_app_settings"
-            android:process=":ui"
-            android:targetActivity="org.microg.gms.ui.MainSettingsActivity"
-            android:taskAffinity="org.microg.gms.settings">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
-
-        <activity
-            android:name="org.microg.gms.ui.SettingsDashboardActivity"
-            android:icon="@mipmap/ic_app_settings"
-            android:label="Legacy microG Settings"
-            android:process=":ui"
-            android:roundIcon="@mipmap/ic_app_settings"
-            android:taskAffinity="org.microg.gms.settings" />
-
         <!-- microG Settings embedded in System Settings on SDK 23 and newer -->
         <activity-alias
             android:name="org.microg.gms.ui.SettingsActivityLink"
