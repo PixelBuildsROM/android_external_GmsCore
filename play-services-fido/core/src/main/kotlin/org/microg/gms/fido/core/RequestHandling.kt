@@ -31,6 +31,14 @@ class MissingPinException(message: String? = null): Exception(message)
 class WrongPinException(message: String? = null): Exception(message)
 
 enum class RequestOptionsType { REGISTER, SIGN }
+class UserInfo(
+    val name: String,
+    val displayName: String? = null,
+    val icon: String? = null
+)
+class AuthenticatorResponseWrapper (
+    val responseChoices: List<Pair<UserInfo?, suspend () -> AuthenticatorResponse>>
+)
 
 val RequestOptions.registerOptions: PublicKeyCredentialCreationOptions
     get() = when (this) {
